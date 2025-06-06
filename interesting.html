@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цікаве</title>
+    <link rel="stylesheet" href="css1/interesting.css">
+    <link rel="stylesheet" href="css1/styles.css">
+    <!-- API ключі -->
+    <script src="https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+    <!-- Шапка сайту -->
+        <header>
+            <div class="header-content">
+                <div class="personal-info">
+                    <img src="img/ja.jpg" alt="Моє фото" class="personal-photo">
+                    <div class="university-info">
+                        <h2>Тернопільський національний технічний університет ім. Івана Пулюя</h2>
+                        <p>Факультет ФІС | Кафедра комп'ютерних наук</p>
+                    </div>
+                </div>
+                <div class="logos">
+                    <img src="img/TNTU_LOGO.png" alt="Лого ТНТУ" class="logo">
+                    <img src="img/LogotipFIS.jpg" alt="Лого ФІС" class="logo">
+                    <img src="img/Logotip-KN-povnij.jpg" alt="Лого КН" class="logo">
+                </div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="bio.html">Біографія</a></li>
+                    <li><a href="group.html">Моя група</a></li>
+                    <li><a href="hobby.html">Хоббі</a></li>
+                    <li><a href="interesting.html">Цікаве</a></li>
+                </ul>
+            </nav>
+        </header>
+
+    <div class="interesting-page">
+        
+        <h2>Цікаве</h2>
+        
+        <div class="content-container">
+            <div class="articles">
+                <div class="article">
+                    <img src="img/shtuchnyy-intelekt.png" alt="Новітні технології">
+                    <div class="article-content">
+                        <h3>Інновації в IT</h3>
+                        <p>Останні досягнення в галузі штучного інтелекту вражають своїми можливостями. Дослідники розробили нову модель, здатну аналізувати складні наукові дані в рекордні строки.</p>
+                        <a href="#" class="read-more">Читати далі →</a>
+                    </div>
+                </div>
+                
+                <div class="article">
+                    <img src="img/karpat.jpg" alt="Подорожі">
+                    <div class="article-content">
+                        <h3>Невідомі місця</h3>
+                        <p>Невивчені куточки Карпат: 5 місць, де ви не зустрінете туристів. Від таємничих печер до стародавніх лісових стежок.</p>
+                        <a href="#" class="read-more">Читати далі →</a>
+                    </div>
+                </div>
+                
+                <div class="article">
+                    <img src="img/remeslo.jpg" alt="Культура">
+                    <div class="article-content">
+                        <h3>Відродження традицій</h3>
+                        <p>Як сучасні майстри інтерпретують старовинні техніки. Вишиванка, гончарство та дерев'яна архітектура набувають нового життя.</p>
+                        <a href="#" class="read-more">Читати далі →</a>
+                    </div>
+                </div>
+                
+                <div class="article">
+                    <img src="img/sonce.jpg" alt="Наука">
+                    <div class="article-content">
+                        <h3>Наукові відкриття</h3>
+                        <p>Як сонячна активність впливає на наш щоденний життєвий ритм? Нові дослідження виявили цікаві зв'язки між космічною погодою та продуктивністю людини.</p>
+                        <a href="#" class="read-more">Читати далі →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <aside class="ad-block">
+                🔥 Спеціальна пропозиція! Курс "Сучасні технології 2025" зі знижкою 25% для наших читачів.
+            </aside>
+        </div>
+    </div>
+    <main>
+            <h2>Цікаві віджети та API</h2>
+            
+            <!-- Секція з віджетами -->
+            <div class="widgets-container">
+                <!-- Погодний інформер -->
+                <div class="widget-card">
+                    <h3>Погода у Тернополі</h3>
+                    <div id="weather-widget" class="weather-widget">
+                        <a href="https://openweathermap.org/city/691650">
+                            <img src="https://openweathermap.org/themes/openweathermap/assets/img/logo_white_cropped.png" 
+                                 alt="OpenWeather" class="weather-logo">
+                        </a>
+                        <div id="weather-data"></div>
+                    </div>
+                </div>
+                
+                <!-- Курси валют -->
+                <div class="widget-card">
+                    <h3>Курси валют</h3>
+                    <div id="currency-widget" class="currency-widget">
+                        <div id="currency-data"></div>
+                    </div>
+                </div>
+                
+                <!-- Віджет YouTube -->
+                <div class="widget-card">
+                    <h3>Останнє відео з каналу</h3>
+                    <div class="youtube-widget">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/latest?channel=UC_x5XG1OV2P6uZZ5FSM9Ttw" 
+                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+                
+                <!-- Google Maps -->
+                <div class="widget-card">
+                    <h3>Наш університет на карті</h3>
+                    <div class="map-widget">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2572.963614767029!2d25.59041531571506!3d49.55192227936862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473036f5c0d1a0a5%3A0x1e0e9a3e0a9a3e0a!2sTernopil%20National%20Technical%20University!5e0!3m2!1sen!2sua!4v1620000000000!5m2!1sen!2sua" 
+                                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                
+                <!-- Новини -->
+                <div class="widget-card">
+                    <h3>Останні новини</h3>
+                    <div id="news-widget" class="news-widget">
+                        <div id="news-data"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    <footer>
+        &copy; 2025 Всі права захищені | Контакти: frameman735@gmail.com
+    </footer>
+    </div>
+        <!-- JavaScript для роботи з API -->
+    <script>
+        // Погодний віджет
+        fetch('https://api.openweathermap.org/data/2.5/weather?q=Ternopil,UA&units=metric&appid=e6e0aea241fddba50f01b4409f3b08bd')
+            .then(response => response.json())
+            .then(data => {
+                const weatherDiv = document.getElementById('weather-data');
+                weatherDiv.innerHTML = `
+                    <p>Температура: ${data.main.temp}°C</p>
+                    <p>Вологість: ${data.main.humidity}%</p>
+                    <p>${data.weather[0].description}</p>
+                `;
+            });
+        
+        // Курси валют
+        fetch('https://api.exchangerate-api.com/v4/latest/USD')
+            .then(response => response.json())
+            .then(data => {
+                const currencyDiv = document.getElementById('currency-data');
+                currencyDiv.innerHTML = `
+                    <p>USD: ${data.rates.UAH.toFixed(2)} грн</p>
+                    <p>EUR: ${(data.rates.UAH / data.rates.EUR).toFixed(2)} грн</p>
+                `;
+            });
+        
+        // Новини
+        fetch('https://newsapi.org/v2/top-headlines?country=ua&apiKey=bb473c6aa1bd45c2b16236355c30aa11')
+            .then(response => response.json())
+            .then(data => {
+                const newsDiv = document.getElementById('news-data');
+                let newsHTML = '';
+                data.articles.slice(0, 3).forEach(article => {
+                    newsHTML += `
+                        <div class="news-item">
+                            <h4><a href="${article.url}" target="_blank">${article.title}</a></h4>
+                            <p>${article.description}</p>
+                        </div>
+                    `;
+                });
+                newsDiv.innerHTML = newsHTML;
+            });
+    </script>
+
+</body>
+</html>

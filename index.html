@@ -2,10 +2,102 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Тестова сторінка</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Персональний сайт - Головна</title>
+    <link rel="stylesheet" href="css1/index.css">
+    <link rel="stylesheet" href="css1/styles.css">
+
 </head>
 <body>
-    <h1>Рубльов Андрій Ігорович</h1>
-    <p>Група: СП-32</p>
+    <div class="container">
+        <!-- Шапка сайту -->
+        <header>
+            <div class="header-content">
+                <div class="personal-info">
+                    <img src="img/ja.jpg" alt="Моє фото" class="personal-photo">
+                    <div class="university-info">
+                        <h2>Тернопільський національний технічний університет ім. Івана Пулюя</h2>
+                        <p>Факультет ФІС | Кафедра комп'ютерних наук</p>
+                    </div>
+                </div>
+                <div class="logos">
+                    <img src="img/TNTU_LOGO.png" alt="Лого ТНТУ" class="logo">
+                    <img src="img/LogotipFIS.jpg" alt="Лого ФІС" class="logo">
+                    <img src="img/Logotip-KN-povnij.jpg" alt="Лого КН" class="logo">
+                </div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="bio.html">Біографія</a></li>
+                    <li><a href="group.html">Моя група</a></li>
+                    <li><a href="hobby.html">Хоббі</a></li>
+                    <li><a href="interesting.html">Цікаве</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="responsive-banner">
+    <div class="banner-inner">
+        <div class="banner-text banner-text-1">Нові можливості</div>
+        <div class="banner-text banner-text-2">Для кожного</div>
+        <div class="banner-text banner-text-3">Відкривай разом з нами!</div>
+        
+        <img src="img/rocket.png" alt="Ракета" class="banner-img img-1">
+        <img src="img/star.png" alt="Зірка" class="banner-img img-2">
+        <img src="img/planet.png" alt="Планета" class="banner-img img-3">
+    </div>
+        </div>
+
+        <!-- Основний контент -->
+        <main>
+            <div class="content">
+                <h2>Ласкаво просимо на мій персональний сайт!</h2>
+                
+                <div class="short-info">
+                    <h3>Біографія</h3>
+                    <p>Мене звати Андрій, я студент групи CП-32 кафедри інженерії програмного забезпечення. Народився і виріс у місті Заліщики, з дитинства цікавився технологіями.</p>
+                    <a href="bio.html" class="read-more">Детальніше &raquo;</a>
+                </div>
+                
+                <div class="short-info">
+                    <h3>Моя група</h3>
+                    <p>Наша група СП-32 - це дружній колектив з 25 осіб. Разом ми вивчаємо програмування, алгоритми та сучасні IT-технології.</p>
+                    <a href="group.html" class="read-more">Детальніше &raquo;</a>
+                </div>
+                
+                <div class="short-info">
+                    <h3>Мої хоббі</h3>
+                    <p>У вільний час захоплююся шахами, люблю слухати музику та гуляти на свіжому повітрі.</p>
+                    <a href="hobby.html" class="read-more">Детальніше &raquo;</a>
+                </div>
+                
+                <div class="short-info">
+                    <h3>Цікаві факти</h3>
+                    <p>Тут я ділюсь цікавими статтями про технології, науку та культуру. Останнім часом вивчаю штучний інтелект.</p>
+                    <a href="interesting.html" class="read-more">Детальніше &raquo;</a>
+                </div>
+            </div>
+            
+            <!-- Рекламні блоки -->
+            <aside>
+                <div class="ad">
+                    <h3>IT-Курси зі знижкою</h3>
+                    <p>Спеціальна пропозиція для студентів ТНТУ - знижка 30% на всі курси програмування!</p>
+                </div>
+                
+                <div class="ad">
+                    <h3>Нові ноутбуки</h3>
+                    <p>Акція на техніку для навчання. Вигідні умови кредитування для студентів.</p>
+                </div>
+            </aside>
+        </main>
+        
+        <!-- Футер -->
+        <footer>
+            <p>&copy; 2025 Всі права захищені | Контакти: frameman735@gmail.com</p>
+        </footer>
+    </div>
 </body>
 </html>
