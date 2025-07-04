@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя група СП-32</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #34495e;
+            --light-bg: #ecf0f1;
+            --card-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            --image-radius: 8px;
+            --ad-color: #f1c40f;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .group-page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            text-align: center;
+            margin: 40px 0;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+            border-radius: 3px;
+        }
+        
+        .group-info {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 40px;
+        }
+        
+        .group-info p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+        
+        .group-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .group-images img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: var(--image-radius);
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .group-images img:hover {
+            transform: scale(1.02);
+        }
+        
+        .ad-blocks {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .ad {
+            background: linear-gradient(135deg, var(--ad-color), #f39c12);
+            padding: 20px;
+            border-radius: var(--image-radius);
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: var(--card-shadow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 150px;
+            position: relative;
+            overflow: hidden;
+            border: 2px dashed rgba(255,255,255,0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .ad::before {
+            content: "Реклама";
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            font-size: 0.8rem;
+            background: rgba(0,0,0,0.2);
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+        
+        .ad:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
+        
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 2rem;
+                margin: 30px 0;
+            }
+            
+            .group-info {
+                padding: 20px;
+            }
+            
+            .group-images {
+                grid-template-columns: 1fr;
+            }
+            
+            .ad-blocks {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="group-page">
+        <h2>Моя група СП-32</h2>
+        
+        <div class="group-info">
+            <p>Наша група СП-32 - це спільнота талановитих та цілеспрямованих студентів, які разом долають виклики навчання. 
+                Ми навчаємось на факультеті інформаційних систем та технологій.
+                 Наша група складається з 25 осіб - 20 хлопців та 5 дівчат. Ми активно беремо участь у наукових конференціях.
+                  Наші викладачі відзначають високий рівень підготовки та командний дух нашої групи.
+                   Щотижня ми організовуємо групові обговорення складних тем та допомагаємо один одному з домашніми завданнями.</p>
+            
+            <div class="group-images">
+                <img src="group.jpg" alt="Долучення групи до флешмобу">
+                <img src="photo_2022-12-22_17-27-38.jpg" alt="Робота над проектом">
+                <img src="photo_2022-11-21_17-22-10.jpg" alt="Фото на огляд">
+            </div>
+            
+            <p>Цього семестру ми працюємо над декількома цікавими проектами, зокрема за курсовими проєктами темами яких є тестування певного програмного забезпечення. якої є тестування  .
+                 Наші заняття проходять у сучасних комп'ютерних лабораторіях, обладнаних потрібною технікою.
+                  Крім навчання, ми разом відпочиваємо - організовуємо пікніки, квест-кімнати та настільні ігри.
+                   Кожен член нашої групи має унікальні якості, що робить нашу групу різнобічною та креативною.</p>
+        </div>
+        
+        <div class="ad-blocks">
+            <div class="ad">Спецпропозиція для студентів: Знижка 30% на курси програмування!</div>
+            <div class="ad">Нові ноутбуки для навчання з вигідною розстрочкою</div>
+            <div class="ad">Безкоштовний вебінар "Кар'єра в IT" для студентів CП-32</div>
+        </div>
+    </div>
+</body>
+</html>
