@@ -50,20 +50,15 @@
         }
         
         .bio-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            align-items: center;
-            background: white;
-            padding: 30px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--card-shadow);
+             display: grid;
+             grid-template-columns: minmax(300px, 1fr) 2fr;
+             gap: 30px;
+             align-items: start;
         }
         
         .bio-image {
-            flex: 1 1 300px;
-            display: flex;
-            justify-content: center;
+            display: grid;
+             place-items: center;
         }
         
         .bio-image img {
@@ -79,9 +74,8 @@
         }
         
         .bio-content {
-            flex: 2 1 400px;
-            display: flex;
-            flex-direction: column;
+             display: grid;
+             gap: 20px;
         }
         
         .bio-section {
@@ -112,10 +106,9 @@
         }
         
         .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 10px;
+           display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+             gap: 10px;
         }
         
         .skill {
@@ -133,18 +126,22 @@
             }
             
             .bio-container {
-                padding: 20px;
-                flex-direction: column;
+                grid-template-columns: 1fr;
+
             }
             
             .bio-image {
-                order: -1;
-                margin-bottom: 20px;
+                 order: -1;
             }
             
             .bio-content {
                 flex: 1 1 100%;
             }
+            
+            .skills-container {       
+                grid-template-columns: repeat(3, 1fr);
+            }
+
         }
         
         @media (max-width: 480px) {
@@ -154,5 +151,8 @@
             
             .bio-section h3 {
                 font-size: 1.1rem;
+            }
+                .skills-container {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
