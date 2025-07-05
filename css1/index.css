@@ -129,6 +129,125 @@
             margin-bottom: 0;
         }
         
+        /* Базові стилі для баннера */
+        .responsive-banner {
+            width: 100%;
+            margin: 0 auto 40px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            position: relative;
+            box-shadow: var(--card-shadow);
+            background-image: url('space.jpg');
+            background-size: cover;
+            background-position: center;
+            aspect-ratio: 16/9; /* Стандартне співвідношення */
+        }
+
+        .banner-inner {
+            position: relative;
+            height: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Анімовані текстові написи */
+        .banner-text {
+            color: white;
+            font-weight: bold;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            margin: 10px 0;
+            opacity: 0;
+            position: relative;
+        }
+
+        .banner-text-1 {
+            font-size: clamp(1.5rem, 4vw, 3rem);
+            animation: fadeInLeft 1s ease-out 0.5s forwards, float 3s ease-in-out 1.5s infinite;
+        }
+
+        .banner-text-2 {
+            font-size: clamp(1.2rem, 3vw, 2.5rem);
+            animation: fadeInRight 1s ease-out 1s forwards, pulse 2s ease-in-out 2s infinite;
+        }
+
+        .banner-text-3 {
+            font-size: clamp(1rem, 2.5vw, 2rem);
+            animation: fadeInUp 1s ease-out 1.5s forwards, shake 3s ease-in-out 2.5s infinite;
+        }
+
+        /* Анімовані PNG-зображення */
+        .banner-img {
+            position: absolute;
+            opacity: 0.9;
+        }
+
+        .img-1 {
+            width: clamp(60px, 10vw, 120px);
+            top: 20%;
+            left: 5%;
+            animation: float 6s ease-in-out infinite, appear 1s ease-out 0.5s forwards;
+        }
+
+        .img-2 {
+            width: clamp(200px, 8vw, 400px);
+            top: 40%;
+            right: 10%;
+            animation: spin 8s linear infinite, appear 1s ease-out 1s forwards;
+        }
+
+        .img-3 {
+            width: clamp(80px, 15vw, 150px);
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: pulse 4s ease-in-out infinite, appear 1s ease-out 1.5s forwards;
+        }
+
+        /* Анімації */
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes appear {
+            from { opacity: 0; }
+            to { opacity: 0.9; }
+        }
+
+
         /* Адаптивність */
         @media (max-width: 992px) {
             main {
@@ -144,8 +263,14 @@
                 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
              }
 
-        }   
-        
+        }    
+
+        @media (max-width: 1200px) {
+    .responsive-banner {
+        aspect-ratio: 3/2;
+        }
+    }
+
         @media (max-width: 768px) {
             nav ul {
                 flex-direction: column;
@@ -164,4 +289,13 @@
                 padding: 20px 15px;
                  gap: 20px;
             }
+            
+            .responsive-banner {
+        aspect-ratio: 1/1;
         }
+    
+        .banner-text-1 { animation-delay: 0.3s, 1.2s; }
+        .banner-text-2 { animation-delay: 0.6s, 1.8s; }
+        .banner-text-3 { animation-delay: 0.9s, 2.4s; }
+
+    }
