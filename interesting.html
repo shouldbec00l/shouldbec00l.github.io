@@ -4,179 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Цікаве</title>
-    <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --text-color: #34495e;
-            --light-bg: #f5f7fa;
-            --card-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            --image-radius: 8px;
-            --ad-color: #f39c12;
-        }
-        
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--light-bg);
-            padding: 20px;
-        }
-        
-        .interesting-page {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 300px;
-            gap: 30px;
-        }
-        
-        h2 {
-            color: var(--primary-color);
-            font-size: 2.5rem;
-            text-align: center;
-            margin: 30px 0;
-            position: relative;
-            grid-column: 1 / -1;
-        }
-        
-        h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
-            border-radius: 3px;
-        }
-        
-        .articles {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-        
-        .article {
-            background: white;
-            border-radius: var(--image-radius);
-            overflow: hidden;
-            box-shadow: var(--card-shadow);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .article:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
-        
-        .article img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-bottom: 3px solid var(--secondary-color);
-        }
-        
-        .article p {
-            padding: 20px;
-            font-size: 1rem;
-            line-height: 1.7;
-            flex-grow: 1;
-        }
-        
-        .ad-block {
-            background: linear-gradient(135deg, var(--ad-color), #e67e22);
-            color: white;
-            padding: 20px;
-            border-radius: var(--image-radius);
-            box-shadow: var(--card-shadow);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-weight: bold;
-            font-size: 1.1rem;
-            height: fit-content;
-            position: sticky;
-            top: 20px;
-            border: 2px dashed rgba(255,255,255,0.3);
-        }
-        
-        .ad-block::before {
-            content: "Реклама";
-            position: absolute;
-            top: 8px;
-            right: 8px;
-            font-size: 0.7rem;
-            background: rgba(0,0,0,0.2);
-            padding: 2px 8px;
-            border-radius: 10px;
-        }
-        
-        @media (max-width: 992px) {
-            .interesting-page {
-                grid-template-columns: 1fr;
-            }
-            
-            .ad-block {
-                position: static;
-                margin-top: 30px;
-                grid-row: 3;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            h2 {
-                font-size: 2rem;
-            }
-            
-            .articles {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css1/interesting.css">
+    <link rel="stylesheet" href="css1/styles.css">
+    
 </head>
 <body>
+    <div class="container">
+    <!-- Шапка сайту -->
+        <header>
+            <div class="header-content">
+                <div class="personal-info">
+                    <img src="img/ja.jpg" alt="Моє фото" class="personal-photo">
+                    <div class="university-info">
+                        <h2>Тернопільський національний технічний університет ім. Івана Пулюя</h2>
+                        <p>Факультет ФІС | Кафедра комп'ютерних наук</p>
+                    </div>
+                </div>
+                <div class="logos">
+                    <img src="img/TNTU_LOGO.png" alt="Лого ТНТУ" class="logo">
+                    <img src="img/Logotip FIS.jpg" alt="Лого ФІС" class="logo">
+                    <img src="img/Logotip-KN-povnij.jpg" alt="Лого КН" class="logo">
+                </div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="bio.html">Біографія</a></li>
+                    <li><a href="group.html">Моя група</a></li>
+                    <li><a href="hobby.html">Хоббі</a></li>
+                    <li><a href="interesting.html">Цікаве</a></li>
+                </ul>
+            </nav>
+        </header>
+
     <div class="interesting-page">
+        
         <h2>Цікаве</h2>
         
-        <div class="articles">
-            <div class="article">
-                <img src="shtuchnyy-intelekt.png" alt="Новітні технології">
-                <p>Останні досягнення в галузі штучного інтелекту вражають своїми можливостями.
-                     Дослідники розробили нову модель, здатну аналізувати складні наукові дані в рекордні строки.
-                      Ця технологія може революціонізувати медичну діагностику та кліматичні дослідження.</p>
+        <div class="content-container">
+            <div class="articles">
+                <div class="article">
+                    <img src="img/shtuchnyy-intelekt.png" alt="Новітні технології">
+                    <div class="article-content">
+                        <h3>Інновації в IT</h3>
+                        <p>Останні досягнення в галузі штучного інтелекту вражають своїми можливостями. Дослідники розробили нову модель, здатну аналізувати складні наукові дані в рекордні строки.</p>
+                        <a href="#" class="read-more">Читати далі →</a>
+                    </div>
+                </div>
+                
+                <div class="article">
+                    <img src="img/karpat.jpg" alt="Подорожі">
+                    <div class="article-content">
+                        <h3>Невідомі місця</h3>
+                        <p>Невивчені куточки Карпат: 5 місць, де ви не зустрінете туристів. Від таємничих печер до стародавніх лісових стежок.</p>
+                        <a href="#" class="read-more">Читати далі →</a>
+                    </div>
+                </div>
+                
+                <div class="article">
+                    <img src="img/remeslo.jpg" alt="Культура">
+                    <div class="article-content">
+                        <h3>Відродження традицій</h3>
+                        <p>Як сучасні майстри інтерпретують старовинні техніки. Вишиванка, гончарство та дерев'яна архітектура набувають нового життя.</p>
+                        <a href="#" class="read-more">Читати далі →</a>
+                    </div>
+                </div>
+                
+                <div class="article">
+                    <img src="img/sonce.jpg" alt="Наука">
+                    <div class="article-content">
+                        <h3>Наукові відкриття</h3>
+                        <p>Як сонячна активність впливає на наш щоденний життєвий ритм? Нові дослідження виявили цікаві зв'язки між космічною погодою та продуктивністю людини.</p>
+                        <a href="#" class="read-more">Читати далі →</a>
+                    </div>
+                </div>
             </div>
             
-            <div class="article">
-                <img src="karpat.jpg" alt="Подорожі">
-                <p>Невивчені куточки Карпат: 5 місць, де ви не зустрінете туристів. Від таємничих печер до стародавніх лісових стежок - ці локації зберегли свою первозданну красу. Дізнайтесь, як добратися до цих прихованих перлин української природи.</p>
-            </div>
-            
-            <div class="article">
-                <img src="remeslo.jpg" alt="Культура">
-                <p>Відродження традиційних ремесел: як сучасні майстри інтерпретують старовинні техніки. Вишиванка, гончарство та дерев'яна архітектура набувають нового життя в руках молодих талантів.</p>
-            </div>
-            
-            <div class="article">
-                <img src="sonce.jpg" alt="Наука">
-                <p>Як сонячна активність впливає на наш щоденний життєвий ритм? Нові дослідження виявили цікаві зв'язки між космічною погодою та продуктивністю людини. Вчений розповідає про методи адаптації до цих змін.</p>
-            </div>
+            <aside class="ad-block">
+                🔥 Спеціальна пропозиція! Курс "Сучасні технології 2025" зі знижкою 25% для наших читачів.
+            </aside>
         </div>
-        
-        <aside class="ad-block">
-            🔥 Спеціальна пропозиція! Курс "Сучасні технології 2024" зі знижкою 25% для наших читачів. Обмежена кількість місць!
-        </aside>
+    </div>
+    
+    <footer>
+        &copy; 2025 Всі права захищені | Контакти: frameman735@gmail.com
+    </footer>
     </div>
 </body>
 </html>

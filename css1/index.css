@@ -1,0 +1,174 @@
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #f5f7fa;
+        }
+        
+        /* Основний контент */
+        main {
+            display: flex;
+            padding: 30px;
+            background-color: white;
+            min-height: 500px;
+        }
+        
+        .content {
+            flex: 3;
+            padding-right: 30px;
+        }
+        
+        .content h2 {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 12px;
+            margin-top: 0;
+            font-size: 28px;
+        }
+        
+        .short-info {
+            margin-bottom: 30px;
+            background-color: var(--light-color);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .short-info:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        
+        .short-info h3 {
+            color: var(--footer-bg);
+            margin-top: 0;
+            font-size: 20px;
+            position: relative;
+            padding-left: 15px;
+        }
+        
+        .short-info h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            height: 70%;
+            width: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+        
+        .short-info p {
+            margin-bottom: 15px;
+        }
+        
+        .read-more {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: var(--transition);
+            font-weight: 500;
+            border: 2px solid transparent;
+        }
+        
+        .read-more:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--accent-color);
+        }
+        
+        /* Рекламні блоки */
+        aside {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .ad {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            color: white;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .ad:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .ad::before {
+            content: "Реклама";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 12px;
+            background: rgba(0,0,0,0.2);
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+        
+        .ad h3 {
+            margin-top: 0;
+            color: white;
+            font-size: 18px;
+        }
+        
+        .ad p {
+            margin-bottom: 0;
+        }
+        
+        /* Адаптивність */
+        @media (max-width: 992px) {
+            main {
+                flex-direction: column;
+            }
+            
+            .content {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+            
+            .header-content {
+                justify-content: center;
+                text-align: center;
+            }
+            
+            .personal-info {
+                flex-direction: column;
+                margin-bottom: 20px;
+            }
+            
+            .personal-photo {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav a {
+                padding: 15px;
+                text-align: center;
+            }
+            
+            .header-content {
+                padding: 0 15px;
+            }
+            
+            main {
+                padding: 20px 15px;
+            }
+        }

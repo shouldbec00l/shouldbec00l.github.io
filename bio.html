@@ -3,122 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Біографія</title>
-    <style>
-        :root {
-            --primary-color: #5d5c61;
-            --secondary-color: #379683;
-            --accent-color: #7395ae;
-            --text-color: #333;
-            --light-bg: #f5f5f5;
-            --card-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            --image-border: 4px solid white;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--light-bg);
-            margin: 0;
-            padding: 0;
-        }
-        
-        main {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background: white;
-            border-radius: 10px;
-            box-shadow: var(--card-shadow);
-        }
-        
-        h2 {
-            color: var(--secondary-color);
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
-            text-align: center;
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-        
-        h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-            border-radius: 3px;
-        }
-        
-        .bio-content {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .bio-content img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: var(--card-shadow);
-            border: var(--image-border);
-            transition: transform 0.3s ease;
-        }
-        
-        .bio-content img:hover {
-            transform: scale(1.03);
-        }
-        
-        .bio-content p {
-            flex: 1;
-            min-width: 300px;
-            padding: 1rem;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            text-align: justify;
-            background: rgba(245, 245, 245, 0.7);
-            border-radius: 8px;
-            border-left: 4px solid var(--accent-color);
-        }
-        
-        @media (max-width: 768px) {
-            .bio-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .bio-content img {
-                margin-bottom: 1.5rem;
-            }
-            
-            .bio-content p {
-                text-align: left;
-                min-width: auto;
-            }
-            
-            h2 {
-                font-size: 1.8rem;
-            }
-        }
-    </style>
+    <title>Моя біографія</title>
+    <link rel="stylesheet" href="css1/styles.css">
+    <link rel="stylesheet" href="css1/bio.css">
+
+    
 </head>
 <body>
+    <div class="container">
+<header>
+            <div class="header-content">
+                <div class="personal-info">
+                    <img src="img/ja.jpg" alt="Моє фото" class="personal-photo">
+                    <div class="university-info">
+                        <h2>Тернопільський національний технічний університет ім. Івана Пулюя</h2>
+                        <p>Факультет ФІС | Кафедра комп'ютерних наук</p>
+                    </div>
+                </div>
+                <div class="logos">
+                    <img src="img/TNTU_LOGO.png" alt="Лого ТНТУ" class="logo">
+                    <img src="img/Logotip FIS.jpg" alt="Лого ФІС" class="logo">
+                    <img src="img/Logotip-KN-povnij.jpg" alt="Лого КН" class="logo">
+                </div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="bio.html">Біографія</a></li>
+                    <li><a href="group.html">Моя група</a></li>
+                    <li><a href="hobby.html">Хоббі</a></li>
+                    <li><a href="interesting.html">Цікаве</a></li>
+                </ul>
+            </nav>
+        </header>
+
     <main>
-        <h2>Біографія</h2>
-        <div class="bio-content">
-            <img src="ja.jpg" alt="Моя фотографія">
-            <p>Народився у мальовничому місті Тернопіль, де й отримав середню освіту. 
-                З дитинства цікавився програмуванням та сучасними технологіями. 
-                У 2022 році вступив до університету "Тернопільський національний університет ім. Пулюя" спеціальність "Інженерія програмного забезпечення". 
-                Беру участь у різноманітних студентських конференціях. У вільний час захоплююся грою в шахи та прогулянками.</p>
+        <h3>Моя біографія</h3>
+        
+        <div class="bio-container">
+            <div class="bio-image">
+                <img src="img/ja.jpg" alt="Моя фотографія">
+            </div>
+            
+            <div class="bio-content">
+                <div class="bio-section">
+                    <h3>Освіта</h3>
+                    <p>Народився 5 вересня 2005 року у мальовничому місті Тернопіль, де й отримав середню освіту. 
+                        Зараз навчаюсь на третьому курсі університету "Тернопільський національний університет ім. Пулюя" за спеціальністю "Інженерія програмного забезпечення".</p>
+                </div>
+                
+                <div class="bio-section">
+                    <h3>Досвід</h3>
+                    <p>Проходив курс IT-компанії Apico, де займався розробкою веб-додатків на JavaScript.</p>
+                </div>
+                
+                <div class="bio-section">
+                    <h3>Навички</h3>
+                    <div class="skills-container">
+                        <span class="skill">HTML/CSS</span>
+                        <span class="skill">JavaScript</span>
+                        <span class="skill">Python</span>
+                        <span class="skill">Git</span>
+                        <span class="skill">Англійська B2</span>
+                    </div>
+                </div>
+                
+                <div class="bio-section">
+                    <h3>Хобі</h3>
+                    <p>У вільний час захоплююся грою в шахи та прогулянками.</p>
+                </div>
+            </div>
         </div>
     </main>
+    
+    <footer>
+        &copy; 2025 Всі права захищені | Контакти: frameman735@gmail.com
+    </footer>
+    </div>
 </body>
 </html>

@@ -1,0 +1,144 @@
+:root {
+            --primary-color: #3498db;
+            --secondary-color: #2980b9;
+            --accent-color: #e74c3c;
+            --footer-bg: #2c3e50;
+            --light-color: #ecf0f1;
+            --text-color: #333;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+            
+        }
+
+footer {
+            background-color: var(--footer-bg);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: auto;
+        }
+
+.container {
+            max-width: 1200px;
+            margin: 0 auto;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            background-color: white;
+            overflow: hidden;
+        }
+
+header {
+            background: linear-gradient(135deg, var(--secondary-color));
+            color: white;
+            padding: 25px 0;
+            position: relative;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+            flex-wrap: wrap;
+        }
+        
+        .personal-info {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .personal-photo {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 3px solid rgba(255,255,255,0.8);
+            margin-right: 25px;
+            object-fit: cover;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .personal-photo:hover {
+            transform: scale(1.05);
+        }
+        
+        .university-info h2 {
+            color: #ffffff;
+            margin: 0;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .university-info p {
+            margin: 8px 0 0;
+            font-size: 15px;
+            opacity: 0.9;
+        }
+        
+        .logos {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .logo {
+            height: 65px;
+            width: auto;
+            transition: var(--transition);
+        }
+        
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+/* Навігація */
+        nav {
+            background-color: var(--footer-bg);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        nav li {
+            position: relative;
+        }
+        
+        nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 18px 30px;
+            transition: var(--transition);
+            font-weight: 500;
+            position: relative;
+        }
+        
+        nav a:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background-color: var(--accent-color);
+            transition: var(--transition);
+        }
+        
+        nav a:hover::after {
+            width: 70%;
+        }

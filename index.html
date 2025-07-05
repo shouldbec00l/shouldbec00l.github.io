@@ -2,59 +2,89 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Персональний сайт</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 1100px;
-            margin: 0 auto;
-        }
-        header, footer {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        main {
-            padding: 20px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Персональний сайт - Головна</title>
+    <link rel="stylesheet" href="css1/index.css">
+    <link rel="stylesheet" href="css1/styles.css">
+
 </head>
 <body>
     <div class="container">
+        <!-- Шапка сайту -->
         <header>
-    <div class="header-content">
-        <img src="ja.jpg" alt="Фото" width="100">
-        <div class="university-info">
-            <h2>Тернопільський національний технічний університет ім. Івана Пулюя</h2>
-            <p>Факультет ФІС | Кафедра комп'ютерних наук</p>
-        </div>
-        <div class="logos">
-            <img src="TNTU_LOGO.png" alt="Логотип ТНТУ" width="80">
-            <img src="Logotip FIS.jpg" alt="Логотип ФІС" width="80">
-            <img src="Logotip-KN-povnij.jpg" alt="Логотип КН" width="80">
-        </div>
-    </div>
-    <nav>
-        <ul>
-            <li><a href="holovna.html">Головна</a></li>
-            <li><a href="bio.html">Біографія</a></li>
-            <li><a href="group.html">Моя група</a></li>
-            <li><a href="hobby.html">Хоббі</a></li>
-            <li><a href="interesting.html">Цікаве</a></li>          
-        </ul>
-    </nav>
-</header>
+            <div class="header-content">
+                <div class="personal-info">
+                    <img src="img/ja.jpg" alt="Моє фото" class="personal-photo">
+                    <div class="university-info">
+                        <h2>Тернопільський національний технічний університет ім. Івана Пулюя</h2>
+                        <p>Факультет ФІС | Кафедра комп'ютерних наук</p>
+                    </div>
+                </div>
+                <div class="logos">
+                    <img src="img/TNTU_LOGO.png" alt="Лого ТНТУ" class="logo">
+                    <img src="img/Logotip FIS.jpg" alt="Лого ФІС" class="logo">
+                    <img src="img/Logotip-KN-povnij.jpg" alt="Лого КН" class="logo">
+                </div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="bio.html">Біографія</a></li>
+                    <li><a href="group.html">Моя група</a></li>
+                    <li><a href="hobby.html">Хоббі</a></li>
+                    <li><a href="interesting.html">Цікаве</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <!-- Основний контент -->
         <main>
-            <h2>Ласкаво просимо на мій персональний сайт!</h2>
-            <p>Тут ви знайдете інформацію про мене, мої навчання, захоплення та цікаві статті.</p>
+            <div class="content">
+                <h2>Ласкаво просимо на мій персональний сайт!</h2>
+                
+                <div class="short-info">
+                    <h3>Біографія</h3>
+                    <p>Мене звати Андрій, я студент групи CП-32 кафедри інженерії програмного забезпечення. Народився і виріс у місті Заліщики, з дитинства цікавився технологіями.</p>
+                    <a href="bio.html" class="read-more">Детальніше &raquo;</a>
+                </div>
+                
+                <div class="short-info">
+                    <h3>Моя група</h3>
+                    <p>Наша група СП-32 - це дружній колектив з 25 осіб. Разом ми вивчаємо програмування, алгоритми та сучасні IT-технології.</p>
+                    <a href="group.html" class="read-more">Детальніше &raquo;</a>
+                </div>
+                
+                <div class="short-info">
+                    <h3>Мої хоббі</h3>
+                    <p>У вільний час захоплююся шахами, люблю слухати музику та гуляти на свіжому повітрі.</p>
+                    <a href="hobby.html" class="read-more">Детальніше &raquo;</a>
+                </div>
+                
+                <div class="short-info">
+                    <h3>Цікаві факти</h3>
+                    <p>Тут я ділюсь цікавими статтями про технології, науку та культуру. Останнім часом вивчаю штучний інтелект.</p>
+                    <a href="interesting.html" class="read-more">Детальніше &raquo;</a>
+                </div>
+            </div>
+            
+            <!-- Рекламні блоки -->
+            <aside>
+                <div class="ad">
+                    <h3>IT-Курси зі знижкою</h3>
+                    <p>Спеціальна пропозиція для студентів ТНТУ - знижка 30% на всі курси програмування!</p>
+                </div>
+                
+                <div class="ad">
+                    <h3>Нові ноутбуки</h3>
+                    <p>Акція на техніку для навчання. Вигідні умови кредитування для студентів.</p>
+                </div>
+            </aside>
         </main>
+        
+        <!-- Футер -->
         <footer>
-            <p>&copy; 2025 Персональний сайт | Рубльов Андрій Ігорович | Група СП-32</p>
+            <p>&copy; 2025 Всі права захищені | Контакти: frameman735@gmail.com</p>
         </footer>
     </div>
 </body>
